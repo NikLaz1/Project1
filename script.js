@@ -37,3 +37,13 @@ var affectedCountries = {
 $.ajax(affectedCountries).done(function (response) {
 	console.log(response);
 });
+
+
+//the below API highlights just the confirmed cases, recovered a deaths. This can be used for the main dashboard. 
+fetch('https://covid19.mathdro.id/api')
+     .then((response)=>{
+         return response.json();
+         })
+        .then((data) => {
+            console.log(data);
+        });
