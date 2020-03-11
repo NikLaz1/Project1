@@ -13,18 +13,6 @@
         <meta property="og:description" content="Provides a daily summary of the Coronavirus (COVID-19) cases by state/province.">
     </head>
 
-    <style>
-        .confirmed:hover{
-        background: lightslategray; 
-        }
-        .deaths:hover{
-        background: lightslategray; 
-        }
-        .recovered:hover{
-        background: lightslategray; 
-        }
-    </style>
-
     <body>
         <!-- START NAV-->
         <nav class="navbar">
@@ -69,58 +57,50 @@
             <section class="articles">
                 <div class="column is-10 is-offset-1">
                     <!-- START ARTICLE -->
-                    <div class="card article">
-                        <div class="card-content">
-                            <div class="media">
-                                    <div class="media-content column is-4 has-text-centered" id ="confirmed"> 
-                                      <p class="title is-4">Total Confirmed Cases</p>
-                                      <p class="subtitle is-2 confirmed has-text-centered"></p>
-                                    </div>
-                                    <div class="media-content column is-4 has-text-centered" id = "deaths">
-                                        <p class="title is-4">Total Deaths</p>
-                                        <p class="subtitle is-2 deaths"></p>
-                                    </div>
-                                    <div class="media-content-center column is-4 has-text-centered" id = "recovered">
-                                        <p class="title is-4">Total Recovered</p>
-                                        <p class="subtitle is-2 recovered"></p>
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
+                    <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth" id="coronavirus_table">
+                        <tr>
+                            <th class="has-text-centered">Country</th>
+                            <th class="has-text-centered">Confirmed Cases</th>
+                            <th class="has-text-centered">Deaths</th>
+                            <th class="has-text-centered">Recovered</th>
+                            <th class="has-text-centered">New Cases</th>
+                            <th class="has-text-centered">Critical</th>
+                            <th class="has-text-centered">New Deaths</th>
+                        </tr>
+                    </table>
                 </div>
             </section>  
         </div>
-                          
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script type="text/javascript">
-            console.log("hello")
-            fetch('https://covid19.mathdro.id/api')
-            .then((response)=>{
-                return response.json();
-            })
-            .then((data) => {
-            $(".confirmed").html(data.confirmed.value);
-            $(".deaths").text(data.deaths.value);
-            $(".recovered").text(data.recovered.value);
+    
+            var cases_by_country = {
+                "async": true,
+                "crossDomain": true,
+                "url": "https://coronavirus-monitor.p.rapidapi.com/coronavirus/cases_by_country.php",   // Cases by country
+                "method": "GET",
+                "headers": {
+                    "x-rapidapi-host": "coronavirus-monitor.p.rapidapi.com",
+                    "x-rapidapi-key": "aef9ada445mshd572571b505136ep1ba534jsne86e024b9f53" // API public key 
+                }
+            }
+            var coronavirus_data = '';
+            $.ajax(cases_by_country).done(function (response) {
+                display = JSON.parse(response)
+                $.each(display.countries_stat, function(key,value){
+                    coronavirus_data += '<tr>';
+                    coronavirus_data += '<td class="has-text-centered">'+value.country_name+'</td>';
+                    coronavirus_data += '<td class="has-text-centered">'+value.cases+'</td>';
+                    coronavirus_data += '<td class="has-text-centered">'+value.deaths+'</td>';
+                    coronavirus_data += '<td class="has-text-centered">'+value.total_recovered+'</td>';
+                    coronavirus_data += '<td class="has-text-centered">'+value.new_cases+'</td>';
+                    coronavirus_data += '<td class="has-text-centered">'+value.serious_critical+'</td>';
+                    coronavirus_data += '<td class="has-text-centered">'+value.new_deaths+'</td>';
+                    coronavirus_data += '</tr>';
+                });
+                $('#coronavirus_table').append(coronavirus_data);
             });
-
-            var confirmedEl = document.querySelector("#confirmed");
-            var deathsEl = document.querySelector("#deaths");
-            var recoveredEl = document.querySelector("#recovered");
-           
-
-            confirmedEl.addEventListener("click", function() {
-                window.open("coronavirus_table.html","_self")
-            });
-
-            deathsEl.addEventListener("click", function() {
-                window.open("coronavirus_table.html","_self")
-            });
-
-            recoveredEl.addEventListener("click", function() {
-                window.open("coronavirus_table.html","_self")
-            });
-
         </script>
 
     </body>
