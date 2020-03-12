@@ -50,22 +50,7 @@ $(document).ready(function(){
         console.log(response);
     });
 
-})
-var affectedCountries = {
-	"async": true,
-	"crossDomain": true,
-	"url": "https://coronavirus-monitor.p.rapidapi.com/coronavirus/affected.php",
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-host": "coronavirus-monitor.p.rapidapi.com",
-		"x-rapidapi-key": "aef9ada445mshd572571b505136ep1ba534jsne86e024b9f53"
-	}
-}
 
-$.ajax(affectedCountries).done(function (response) {
-    console.log(response);
-    $(".content article-body").html("<h1>" + response.confirmed.value + " Confirmed Deaths</h1>")
-});
 
  # Installation
 To use this portfolio, log into your GitHub account (if you don’t have a GitHub user profile, create one at https://github.com/join) and open this link in your browser: . Then click on the "Fork" button at the top right corner and wait until the repo is forked. 
