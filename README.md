@@ -34,6 +34,7 @@ Natasha Gilani (back-end)
 
 # Sample Code
 
+
 $(document).ready(function(){
     var cases_by_country = {
         "async": true,
@@ -45,11 +46,6 @@ $(document).ready(function(){
             "x-rapidapi-key": "aef9ada445mshd572571b505136ep1ba534jsne86e024b9f53" // API public key 
         }
     }
-    
-    $.ajax(cases_by_country).done(function (response) {
-        console.log(response);
-    });
-
 
 
  # Installation
