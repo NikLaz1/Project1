@@ -25,7 +25,7 @@ Natasha Gilani (back-end)
 - Must be deployed to GitHub Pages
 
 # Screenshot
-
+img width="1434" alt="Screen Shot 2020-03-12 at 10 17 05 AM" src="https://user-images.githubusercontent.com/56641651/76530795-a2359700-644a-11ea-825d-5ff33938df66.png"
 
 
 
