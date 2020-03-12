@@ -1,4 +1,4 @@
-# Coronavirus (COVID-19) Dashboard 
+# Coronavirus (COVID-19) Dashboard (https://github.com/NikLaz1/Project1/tree/master)
 
 # Synopsis
 The Novel Coronavirus (CODIV-19) outbreak is now spreading around the world, with more than 100,000 cases and >3,000 deaths. This live-updating dashboard provides a way for us to track the virus, which has now been classified as a pandemic. Our main purpose to build this project was to build something relevant and useful to people. 
@@ -11,10 +11,10 @@ The dashboard has a simple UI as this is our first MVP. There is a menubar with 
 This dasboard is built using HTML, CSS, Javascript and Jquery in the front-end. We also used Bulma as an alternaitive to Bootsrap (https://bulma.io). We also used server side APIs and a third-party API to pull data. Data was pulled from two sources: RapidAPI (https://coronavirus-monitor.p.rapidapi.com/coronavirus/cases_by_country.php) and https://covid19.mathdro.id/api.  
 
 # Team 
-Nikola Lazovic (front-end)
-Runj Viring (front-end)
-Manjinder Gill (back-end)
-Natasha Gilani (back-end)
+- Nikola Lazovic (front-end)
+- Runj Viring (front-end)
+- Manjinder Gill (back-end)
+- Natasha Gilani (back-end)
 
 
 # Project Requirements
@@ -49,4 +49,4 @@ $(document).ready(function(){
 
 
  # Installation
-To use this portfolio, log into your GitHub account (if you don’t have a GitHub user profile, create one at https://github.com/join) and open this link in your browser: . Then click on the "Fork" button at the top right corner and wait until the repo is forked. 
+To use this portfolio, log into your GitHub account (if you don’t have a GitHub user profile, create one at https://github.com/join) and open this link in your browser: https://niklaz1.github.io/Project1/ . Then click on the "Fork" button at the top right corner and wait until the repo is forked. 
