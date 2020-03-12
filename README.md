@@ -3,6 +3,11 @@
 # Synopsis
 The Novel Coronavirus (CODIV-19) outbreak is now spreading around the world, with more than 100,000 cases and >3,000 deaths. This live-updating dashboard provides a way for us to track the virus, which has now been classified as a pandemic. 
 
+# Functionality
+The dasboard has a simple UI as this is our first MVP. 
+We will incorporate a map in a later version. 
+
+
 # Technicalities 
 This dasboard is built using HTML, CSS, Javascript and Jquery in the front-end. We also used Bulma as an alternaitive to Bootsrap (https://bulma.io). We also used server side APIs and a third-party API to pull data. Data was pulled from two sources: RapidAPI (https://coronavirus-monitor.p.rapidapi.com/coronavirus/cases_by_country.php) and https://covid19.mathdro.id/api.  
 
@@ -25,8 +30,7 @@ Natasha Gilani (back-end)
 - Must be deployed to GitHub Pages
 
 # Screenshot
-https://user-images.githubusercontent.com/56641651/76530795-a2359700-644a-11ea-825d-5ff33938df66.png
-
+<img width="1434" alt="Screen Shot 2020-03-12 at 10 17 05 AM" src="https://user-images.githubusercontent.com/56641651/76530795-a2359700-644a-11ea-825d-5ff33938df66.png">
 
 
 
