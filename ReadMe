@@ -1,37 +1,35 @@
-##Coronavirus Dashboard 
+# Coronavirus (COVID-19) Dashboard 
 
-Synopsis
-This is a random password generator that generates an output based on user defined inputs. The end password generated is between 8 and 128 characters in length. This program is built using Javascript (event listener to listen to button click, functions, arrays, for loop, if statemetns and math random and math floor functions.
+# Synopsis
+The Novel Coronavirus (CODIV-19) outbreak is now spreading around the world, with more than 100,000 cases and >3,000 deaths. This live-updating dashboard provides a way for us to track the virus, which has now been classified as a pandemic. 
 
-User Story
-AS AN employee with access to sensitive data I WANT to randomly generate a password that meets certain criteria SO THAT I can create a strong password that provides greater security
+# Technicalities 
+This dasboard is built using HTML, CSS, Javascript and Jquery in the front-end. We also used Bulma as an alternaitive to Bootsrap (https://bulma.io). We also used server side APIs and a third-party API to pull data. Data was pulled from two sources: RapidAPI (https://coronavirus-monitor.p.rapidapi.com/coronavirus/cases_by_country.php) and https://covid19.mathdro.id/api.  
 
-Screenshot
-Screen Shot 2020-02-11 at 8 44 16 AM
+# Team 
+Nikola Lazovic (front-end)
+Runj Viring (front-end)
+Manjinder Gill (back-end)
+Natasha Gilani (back-end)
 
-Acceptance Criteria
-The password generator fulfills the below acceptance criteria:
 
-A button initiates the password generation process
-A series of prompts asks a user for password criteria
-User is able to select which criteria to include in the password
-Length of the generated password is between 8 - 128 characters
-User is able to choose lowercase, uppercase, numeric, and/or special characters with each prompt
-All user input is validated
-The resultant password mataches the user criteria
-The resultant password is written to the page
-Sample Code
-getLowerCases: function() {
-  return String.fromCharCode(Math.floor(Math.random() * 26 + 97));
-},
+# Project Requirements
 
-getUpperCases: function() {
-  return String.fromCharCode(Math.floor(Math.random() * 26 + 65));
-},
+- Must use at least two server-side APIs
+- Must use a CSS framework other than Bootstrap
+- Must be interactive (i.e: accept and respond to user input)
+- Use at least one new third-party API
+- Must have a polished UI
+- Must meet good quality coding standards
+- Does not use alerts, confirms or prompts (look into modals)
+- Must be deployed to GitHub Pages
 
-getSpecialCharacters: function() {
-  return specialCharacters[Math.floor(Math.random() * specialCharacters.length)]
-Installation
-To use this portfolio, log into your GitHub account (if you don’t have a GitHub user profile, create one at https://github.com/join) and open this link in your browser: https://github.com/natashagils/PasswordGenerator. Then click on the "Fork" button at the top right corner and wait until the repo is forked.
+# Screenshot
 
-Bulma: https://bulma.io/documentation/components/card/
+
+
+
+
+
+# Sample Code
+
