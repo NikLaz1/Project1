@@ -1,4 +1,5 @@
-# Coronavirus (COVID-19) Dashboard (https://github.com/NikLaz1/Project1/tree/master)
+# Coronavirus (COVID-19) Dashboard 
+https://github.com/NikLaz1/Project1/tree/master
 
 # Synopsis
 The Novel Coronavirus (CODIV-19) outbreak is now spreading around the world, with more than 100,000 cases and >3,000 deaths. This live-updating dashboard provides a way for us to track the virus, which has now been classified as a pandemic. Our main purpose to build this project was to build something relevant and useful to people. 
